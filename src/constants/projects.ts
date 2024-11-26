@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Check-out this Portfolio Website on my GitHub",
     description: "Modern portfolio built with Next.js 14, Tailwind CSS, and Framer Motion. Features smooth animations and responsive design.",
-    image: "Akhilesh-portfoliopublic/images/projects/Porfolio.png",
+    image: "Akhilesh-portfolio/public/images/projects/Porfolio.png",
     githubLink: "https://github.com/asJ26/Akhilesh-portfolio.git",
     
     skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
