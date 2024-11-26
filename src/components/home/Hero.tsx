@@ -49,7 +49,7 @@ export default function Hero() {
             <div className="flex flex-col items-center gap-6 mt-8">
               <div className="flex items-center justify-center space-x-6">
                 <ButtonLitLink
-                  href="https://github.com/akhilesh-jadhav"
+                  href="https://github.com/asJ26"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 p-0 flex items-center justify-center"
@@ -57,7 +57,7 @@ export default function Hero() {
                   <BsGithub className="w-5 h-5" />
                 </ButtonLitLink>
                 <ButtonLitLink
-                  href="https://www.linkedin.com/in/akhilesh-jadhav-data/"
+                  href="https://www.linkedin.com/in/akhilesh-s-jadhav/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 p-0 flex items-center justify-center"
@@ -65,7 +65,7 @@ export default function Hero() {
                   <BsLinkedin className="w-5 h-5" />
                 </ButtonLitLink>
                 <ButtonLitLink
-                  href="https://medium.com/@akhileshjadhav"
+                  href="https://medium.com/@akhileshjadhav26"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 p-0 flex items-center justify-center"
