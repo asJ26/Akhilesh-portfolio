@@ -1,5 +1,5 @@
 # Portfolio Website
-![Portfolio Preview](/Akhilesh-portfolio/images/projects/Porfolio.png)
+![Portfolio Preview](/public/images/projects/Porfolio.png)
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design, dark mode support, and smooth animations.
 
 Live Demo: [https://asj26.github.io/Akhilesh-portfolio/](https://asj26.github.io/Akhilesh-portfolio/)
