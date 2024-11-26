@@ -37,6 +37,13 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: SKIP_LINT=true npm run build
+      - name: Check output directory
+        run: |
+          if [ ! -d "out" ]; then
+            echo "Output directory 'out' not found!"
+            exit 1
+          fi
+          ls -la out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
