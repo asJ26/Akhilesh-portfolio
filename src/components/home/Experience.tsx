@@ -22,7 +22,7 @@ const experiences: Experience[] = [
     location: "Syracuse, NY",
     type: "On-site",
     date: "July 2024 - Present",
-    description: "Designed and implemented ETL processes, handling over 1TB of daily data processing.",
+    description: "project develops a predictive analytics model to determine song popularity, employing machine learning techniques to derive actionable insights for music industry strategizing.",
     skills: ["Python", "Spark", "Azure", "PostgreSQL"],
   },
   {
