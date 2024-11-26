@@ -1,107 +1,77 @@
+import { IconType } from 'react-icons';
 import { 
-  SiPython, SiJava, SiScala, SiR, SiGo, SiBash,
-  SiApachespark, SiApachekafka, SiApachehadoop, SiApachehive, SiHbase, SiApacheflink,
-  SiPostgresql, SiMysql, SiMongodb, SiCassandra, SiRedis, SiSnowflake, SiOracle, SiMicrosoftsqlserver,
-  SiAmazonaws, SiGooglecloud, SiMicrosoftazure, SiDatabricks, SiGooglebigquery,
-  SiApacheairflow, SiTalend, SiInformatica, SiAmazondynamodb, SiElasticsearch,
-  SiDocker, SiKubernetes, SiJenkins, SiTerraform, SiAnsible,
-  SiPowerbi, SiTableau, SiLooker
+  SiPython, SiJavascript, SiR, SiGo, SiGnubash,
+  SiApachespark, SiApachekafka, SiApachehadoop, SiApachehive, SiApacheflink,
+  SiPostgresql, SiMysql, SiMongodb, SiRedis, SiSnowflake, SiOracle, SiMicrosoftsqlserver,
+  SiAmazon, SiGooglecloud, SiMicrosoftazure, SiDatabricks, SiGooglebigquery,
+  SiApacheairflow, SiTalend, SiInformatica,
+  SiGit, SiJenkins, SiDocker, SiKubernetes, SiTerraform, SiAnsible,
+  SiPowerbi, SiTableau, SiLooker,
+  SiScala, SiElasticsearch, SiApache
 } from 'react-icons/si';
 import { 
-  FaDatabase, FaServer, FaCloud, FaLock, FaCog, FaChartBar,
-  FaCode, FaTerminal, FaNetworkWired, FaShieldAlt
+  FaDatabase, FaNetworkWired, FaWarehouse, FaWater, 
+  FaStream, FaClock, FaLayerGroup, FaChartLine
 } from 'react-icons/fa';
-import { IconType } from 'react-icons';
 
-interface Skill {
-  name: string;
-  category: string;
-  icon: IconType;
-}
-
-export const skills: Skill[] = [
+export const iconMap: Record<string, { icon: IconType; color: string }> = {
   // Core Data Engineering
-  { name: "Data Modeling", category: "Core Data Engineering", icon: FaDatabase },
-  { name: "ETL/ELT Processes", category: "Core Data Engineering", icon: FaNetworkWired },
-  { name: "Data Warehousing", category: "Core Data Engineering", icon: FaServer },
-  { name: "Data Lakes", category: "Core Data Engineering", icon: FaDatabase },
-  { name: "Data Pipelines", category: "Core Data Engineering", icon: FaNetworkWired },
-  { name: "Real-time Data Processing", category: "Core Data Engineering", icon: FaCog },
-  { name: "Batch Processing", category: "Core Data Engineering", icon: FaServer },
+  'Data Modeling': { icon: FaDatabase, color: '#4299E1' },
+  'ETL/ELT Processes': { icon: FaNetworkWired, color: '#48BB78' },
+  'Data Warehousing': { icon: FaWarehouse, color: '#9F7AEA' },
+  'Data Lakes': { icon: FaWater, color: '#4FD1C5' },
+  'Data Pipelines': { icon: FaStream, color: '#F6AD55' },
+  'Real-time Processing': { icon: FaClock, color: '#FC8181' },
+  'Batch Processing': { icon: FaLayerGroup, color: '#68D391' },
 
-  // Programming Languages
-  { name: "Python", category: "Languages", icon: SiPython },
-  { name: "SQL (Advanced)", category: "Languages", icon: FaDatabase },
-  { name: "Java", category: "Languages", icon: SiJava },
-  { name: "Scala", category: "Languages", icon: SiScala },
-  { name: "R", category: "Languages", icon: SiR },
-  { name: "Shell Scripting", category: "Languages", icon: FaTerminal },
-  { name: "Go", category: "Languages", icon: SiGo },
-  { name: "Bash", category: "Languages", icon: SiBash },
+  // Languages
+  'Python': { icon: SiPython, color: '#3776AB' },
+  'Java': { icon: SiJavascript, color: '#007396' },
+  'Scala': { icon: SiScala, color: '#DC322F' },
+  'R': { icon: SiR, color: '#276DC3' },
+  'Go': { icon: SiGo, color: '#00ADD8' },
+  'Bash': { icon: SiGnubash, color: '#4EAA25' },
 
-  // Big Data Technologies
-  { name: "Apache Spark", category: "Big Data", icon: SiApachespark },
-  { name: "Apache Kafka", category: "Big Data", icon: SiApachekafka },
-  { name: "Hadoop & HDFS", category: "Big Data", icon: SiApachehadoop },
-  { name: "Hive", category: "Big Data", icon: SiApachehive },
-  { name: "HBase", category: "Big Data", icon: SiHbase },
-  { name: "Apache Flink", category: "Big Data", icon: SiApacheflink },
-  { name: "Apache NiFi", category: "Big Data", icon: FaNetworkWired },
-  { name: "Apache Beam", category: "Big Data", icon: FaNetworkWired },
+  // Big Data
+  'Apache Spark': { icon: SiApachespark, color: '#E25A1C' },
+  'Apache Kafka': { icon: SiApachekafka, color: '#231F20' },
+  'Hadoop': { icon: SiApachehadoop, color: '#FF652F' },
+  'Hive': { icon: SiApachehive, color: '#FDEE21' },
+  'Apache Flink': { icon: SiApacheflink, color: '#E6526F' },
 
   // Databases
-  { name: "PostgreSQL", category: "Databases", icon: SiPostgresql },
-  { name: "MySQL", category: "Databases", icon: SiMysql },
-  { name: "MongoDB", category: "Databases", icon: SiMongodb },
-  { name: "Cassandra", category: "Databases", icon: SiCassandra },
-  { name: "Redis", category: "Databases", icon: SiRedis },
-  { name: "Snowflake", category: "Databases", icon: SiSnowflake },
-  { name: "Oracle Database", category: "Databases", icon: SiOracle },
-  { name: "Microsoft SQL Server", category: "Databases", icon: SiMicrosoftsqlserver },
+  'PostgreSQL': { icon: SiPostgresql, color: '#336791' },
+  'MySQL': { icon: SiMysql, color: '#4479A1' },
+  'MongoDB': { icon: SiMongodb, color: '#47A248' },
+  'Redis': { icon: SiRedis, color: '#DC382D' },
+  'Snowflake': { icon: SiSnowflake, color: '#29B5E8' },
+  'Oracle': { icon: SiOracle, color: '#F80000' },
+  'SQL Server': { icon: SiMicrosoftsqlserver, color: '#CC2927' },
+  'Elasticsearch': { icon: SiElasticsearch, color: '#005571' },
 
-  // Cloud Platforms
-  { name: "Amazon Web Services (AWS)", category: "Cloud", icon: SiAmazonaws },
-  { name: "Google Cloud Platform (GCP)", category: "Cloud", icon: SiGooglecloud },
-  { name: "Microsoft Azure", category: "Cloud", icon: SiMicrosoftazure },
-  { name: "Databricks Platform", category: "Cloud", icon: SiDatabricks },
-  { name: "Google BigQuery", category: "Cloud", icon: SiGooglebigquery },
-  { name: "Amazon Redshift", category: "Cloud", icon: SiAmazonaws },
-  { name: "Azure Data Lake Storage", category: "Cloud", icon: SiMicrosoftazure },
+  // Cloud
+  'AWS': { icon: SiAmazon, color: '#FF9900' },
+  'Google Cloud': { icon: SiGooglecloud, color: '#4285F4' },
+  'Azure': { icon: SiMicrosoftazure, color: '#0089D6' },
+  'Databricks': { icon: SiDatabricks, color: '#FF3621' },
+  'BigQuery': { icon: SiGooglebigquery, color: '#4285F4' },
 
-  // Data Integration & Orchestration
-  { name: "Apache Airflow", category: "Data Integration", icon: SiApacheairflow },
-  { name: "Talend", category: "Data Integration", icon: SiTalend },
-  { name: "Informatica", category: "Data Integration", icon: SiInformatica },
-  { name: "AWS Glue", category: "Data Integration", icon: SiAmazonaws },
-  { name: "Azure Data Factory", category: "Data Integration", icon: SiMicrosoftazure },
-  { name: "Data Build Tool (DBT)", category: "Data Integration", icon: FaDatabase },
+  // Data Integration
+  'Airflow': { icon: SiApacheairflow, color: '#017CEE' },
+  'Talend': { icon: SiTalend, color: '#FF6D70' },
+  'Informatica': { icon: SiInformatica, color: '#FF4D4F' },
 
-  // Data Security & Compliance
-  { name: "Data Encryption", category: "Security & Compliance", icon: FaLock },
-  { name: "Data Masking", category: "Security & Compliance", icon: FaShieldAlt },
-  { name: "Role-Based Access Control", category: "Security & Compliance", icon: FaLock },
-  { name: "Identity and Access Management", category: "Security & Compliance", icon: FaShieldAlt },
-  { name: "GDPR/HIPAA/CCPA Compliance", category: "Security & Compliance", icon: FaShieldAlt },
+  // DevOps
+  'Git': { icon: SiGit, color: '#F05032' },
+  'Jenkins': { icon: SiJenkins, color: '#D24939' },
+  'Docker': { icon: SiDocker, color: '#2496ED' },
+  'Kubernetes': { icon: SiKubernetes, color: '#326CE5' },
+  'Terraform': { icon: SiTerraform, color: '#7B42BC' },
+  'Ansible': { icon: SiAnsible, color: '#EE0000' },
 
-  // Performance & Optimization
-  { name: "Query Optimization", category: "Performance", icon: FaCog },
-  { name: "Data Caching", category: "Performance", icon: FaServer },
-  { name: "Sharding & Partitioning", category: "Performance", icon: FaDatabase },
-  { name: "Cluster Management", category: "Performance", icon: FaServer },
-  { name: "Load Balancing", category: "Performance", icon: FaNetworkWired },
-  { name: "Resource Management", category: "Performance", icon: FaCog },
-
-  // DevOps & Tools
-  { name: "Git/GitHub/GitLab", category: "DevOps", icon: FaCode },
-  { name: "Jenkins", category: "DevOps", icon: SiJenkins },
-  { name: "Docker", category: "DevOps", icon: SiDocker },
-  { name: "Kubernetes", category: "DevOps", icon: SiKubernetes },
-  { name: "Terraform", category: "DevOps", icon: SiTerraform },
-  { name: "Ansible", category: "DevOps", icon: SiAnsible },
-
-  // Data Visualization
-  { name: "Power BI", category: "Visualization", icon: SiPowerbi },
-  { name: "Tableau", category: "Visualization", icon: SiTableau },
-  { name: "Looker", category: "Visualization", icon: SiLooker },
-  { name: "Sigma Computing", category: "Visualization", icon: FaChartBar }
-];
+  // Visualization
+  'Power BI': { icon: SiPowerbi, color: '#F2C811' },
+  'Tableau': { icon: SiTableau, color: '#E97627' },
+  'Looker': { icon: SiLooker, color: '#4285F4' },
+  'Analytics': { icon: FaChartLine, color: '#6B7280' }
+};

@@ -41,7 +41,6 @@ export default function Projects() {
                 title={project.title}
                 description={project.description}
                 skills={project.skills}
-                className={project.className}
                 githubLink={project.githubLink}
                 header={
                   <div className="absolute inset-0">
