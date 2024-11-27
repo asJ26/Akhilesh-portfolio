@@ -13,7 +13,7 @@ export default function Hero() {
       className: "text-neutral-800 dark:text-white"
     },
     {
-      text: "I'm",
+      text: "I&apos;m",
       className: "text-neutral-800 dark:text-white"
     },
     {
@@ -42,7 +42,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white"
               >
-                Hi, I'm Akhilesh Jadhav
+                Hi, I&apos;m Akhilesh Jadhav
               </motion.h1>
             }
           >
