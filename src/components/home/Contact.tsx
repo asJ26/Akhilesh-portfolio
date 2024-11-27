@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { cn } from "../../utils/cn";
 import { HiOutlineMail } from "react-icons/hi";
 import { ButtonLitLink } from '../ui/button-lit';
-import { CardHoverEffect } from '../ui/card-hover-effect';
+import { CardSpotlight } from '../ui/card-spotlight';
 
 export default function Contact() {
   return (
@@ -32,7 +32,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-lg mx-auto"
         >
-          <CardHoverEffect>
+          <CardSpotlight className="w-full rounded-xl bg-white dark:bg-[#030712] border border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-neutral-100/30 dark:hover:shadow-neutral-900/30 hover:border-neutral-300 dark:hover:border-neutral-700">
             <div className="p-8">
               <div className="flex flex-col items-center justify-center space-y-4">
                 <div className={cn(
@@ -61,7 +61,7 @@ export default function Contact() {
                 </ButtonLitLink>
               </div>
             </div>
-          </CardHoverEffect>
+          </CardSpotlight>
         </motion.div>
       </div>
     </section>

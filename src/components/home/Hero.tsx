@@ -3,6 +3,7 @@
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaMediumM } from "react-icons/fa";
+import { ButtonLitLink } from "../ui/button-lit";
 
 export default function Hero() {
   const words = [
@@ -70,24 +71,24 @@ export default function Hero() {
             </a>
           </div>
 
-          <a
+          <ButtonLitLink
             href="#projects"
-            className="mt-8 px-6 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full font-medium hover:scale-105 transition-transform duration-200"
+            className="mt-8"
           >
             View Projects
-          </a>
+          </ButtonLitLink>
 
           <div className="grid grid-cols-3 gap-12 mt-20 text-center">
             <div>
-              <h2 className="text-3xl font-bold mb-2">20+</h2>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">20+</h2>
               <p className="text-sm text-neutral-600 dark:text-white/80">Data Pipelines</p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-2">100TB+</h2>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">100TB+</h2>
               <p className="text-sm text-neutral-600 dark:text-white/80">Data Processed</p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-2">99.9%</h2>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">99.9%</h2>
               <p className="text-sm text-neutral-600 dark:text-white/80">Pipeline Reliability</p>
             </div>
           </div>
