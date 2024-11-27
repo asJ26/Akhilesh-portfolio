@@ -1,14 +1,10 @@
 "use client";
 
-import { motion } from 'framer-motion';
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaMediumM } from "react-icons/fa";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Hero() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  
   const words = [
     {
       text: "Hi",
@@ -32,13 +28,14 @@ export default function Hero() {
     <section className="min-h-[90vh] w-full relative">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="h-[40rem] w-full flex flex-col items-center justify-center">
-          {isMobile ? (
+          <div className="hidden md:block">
+            <TypewriterEffect words={words} className="text-4xl sm:text-5xl" />
+          </div>
+          <div className="md:hidden">
             <h1 className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white">
               Hi, I'm Akhilesh Jadhav
             </h1>
-          ) : (
-            <TypewriterEffect words={words} className="text-4xl sm:text-5xl" />
-          )}
+          </div>
           
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto text-center mt-6">
             Data Engineer specializing in building scalable data pipelines and analytics
