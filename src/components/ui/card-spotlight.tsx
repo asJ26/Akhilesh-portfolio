@@ -26,21 +26,42 @@ export const CardSpotlight = ({
 
   return (
     <div
+      onMouseMove={handleMouseMove}
       className={cn(
-        "group/spotlight relative rounded-lg bg-black",
+        "group/spotlight relative",
         className
       )}
-      onMouseMove={handleMouseMove}
     >
+      {/* Light mode spotlight */}
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-lg opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/spotlight:opacity-100 block dark:hidden"
         style={{
-          background: "linear-gradient(to right, #4fc3dc, #3b82f6)",
-          maskImage: useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, white, transparent)`,
-          WebkitMaskImage: useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, white, transparent)`,
+          background: useMotionTemplate`
+            radial-gradient(
+              400px circle at ${mouseX}px ${mouseY}px,
+              rgba(120, 120, 120, 0.1) 0%,
+              transparent 80%
+            )
+          `,
         }}
       />
-      {children}
+      {/* Dark mode spotlight */}
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/spotlight:opacity-100 hidden dark:block"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(
+              400px circle at ${mouseX}px ${mouseY}px,
+              rgba(139, 92, 246, 0.15) 0%,
+              rgba(139, 92, 246, 0.1) 50%,
+              transparent 80%
+            )
+          `,
+        }}
+      />
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
-}; 
+};

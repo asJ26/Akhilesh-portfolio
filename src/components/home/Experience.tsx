@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { cn } from "../../utils/cn";
-import { CardHoverEffect } from "../ui/card-hover-effect";
+import { CardSpotlight } from "../ui/card-spotlight";
 
 interface Experience {
   title: string;
@@ -120,7 +120,7 @@ export default function Experience() {
                     idx % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
                   )}
                 >
-                  <CardHoverEffect>
+                  <CardSpotlight className="w-full rounded-xl bg-white dark:bg-[#030712] border border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-neutral-100/30 dark:hover:shadow-neutral-900/30 hover:border-neutral-300 dark:hover:border-neutral-700">
                     <div className="p-6">
                       {/* Title */}
                       <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
@@ -161,7 +161,7 @@ export default function Experience() {
                         ))}
                       </div>
                     </div>
-                  </CardHoverEffect>
+                  </CardSpotlight>
                 </motion.div>
               </div>
             ))}
