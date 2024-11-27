@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from 'framer-motion';
 
@@ -47,8 +47,8 @@ export default function About() {
                 reliable data infrastructure.
               </p>
             </motion.div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <Stat label="Years Experience" value="3.5+" />
               <Stat label="Projects Completed" value="20+" />
               <Stat label="Technologies" value="15+" />
