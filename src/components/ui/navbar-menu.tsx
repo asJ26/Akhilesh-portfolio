@@ -1,3 +1,6 @@
+"use client";
+
+
 import type { FC, ReactNode } from 'react';
 import { useState } from "react";
 import type { Variants } from 'framer-motion';
