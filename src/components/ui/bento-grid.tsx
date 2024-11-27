@@ -16,7 +16,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[28rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
+        "grid auto-rows-[24rem] sm:auto-rows-[26rem] md:auto-rows-[28rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-7xl mx-auto",
         className
       )}
     >
@@ -61,7 +61,7 @@ export const BentoGridItem = ({
         )}
       >
         {/* Image Container */}
-        <div className="relative w-full h-48 rounded-t-xl overflow-hidden flex-shrink-0">
+        <div className="relative w-full h-40 sm:h-44 md:h-48 rounded-t-xl overflow-hidden flex-shrink-0">
           <div className="absolute inset-0 z-10">
             {header}
           </div>
@@ -69,24 +69,24 @@ export const BentoGridItem = ({
         </div>
 
         {/* Content Container */}
-        <div className="flex flex-col flex-grow p-4">
+        <div className="flex flex-col flex-grow p-3 sm:p-4">
           {/* Title and Description */}
           <div>
-            <h3 className="font-bold text-xl text-neutral-900 dark:text-white mb-2 line-clamp-1">
+            <h3 className="font-bold text-lg sm:text-xl text-neutral-900 dark:text-white mb-1.5 sm:mb-2 line-clamp-1">
               {title}
             </h3>
-            <p className="text-neutral-600 dark:text-white/80 text-sm line-clamp-2 mb-4">
+            <p className="text-neutral-600 dark:text-white/80 text-xs sm:text-sm line-clamp-2 mb-3 sm:mb-4">
               {description}
             </p>
           </div>
 
           {/* Skills */}
           {skills && skills.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 text-xs font-medium rounded-full 
+                  className="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full 
                     bg-neutral-100 dark:bg-[#0A0F1A]
                     text-neutral-600 dark:text-white/90
                     border border-neutral-200 dark:border-neutral-800
@@ -111,9 +111,9 @@ export const BentoGridItem = ({
             >
               <div className="flex items-center justify-center space-x-2">
                 <span className="group-hover/github:rotate-[360deg] transition-transform duration-500">
-                  <BsGithub className="w-5 h-5" />
+                  <BsGithub className="w-4 h-4 sm:w-5 sm:h-5" />
                 </span>
-                <span className="text-sm font-medium group-hover/github:translate-x-1 transition-transform duration-200">
+                <span className="text-xs sm:text-sm font-medium group-hover/github:translate-x-1 transition-transform duration-200">
                   View on GitHub
                 </span>
               </div>
