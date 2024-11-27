@@ -46,21 +46,21 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-16 sm:py-20 lg:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
-            My Experise
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-3 sm:mb-4">
+            My Expertise
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4 max-w-5xl mx-auto px-2 sm:px-4">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -70,24 +70,24 @@ export default function Skills() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ y: -5 }}
               className={cn(
-                "p-4 rounded-lg",
+                "p-2 sm:p-3 md:p-4 rounded-lg",
                 "bg-white hover:bg-neutral-50",
                 "dark:bg-[#030712] dark:hover:bg-[#111827]",
                 "border border-neutral-200",
                 "hover:border-neutral-300",
                 "dark:border-neutral-800/50 dark:hover:border-purple-500/50",
                 "overflow-hidden transition-all duration-200",
-                "flex flex-col items-center justify-center gap-3",
+                "flex flex-col items-center justify-center gap-2 sm:gap-3",
                 "shadow-sm hover:shadow",
                 "group"
               )}
             >
               <skill.icon 
-                className="w-7 h-7 transition-transform duration-300 group-hover:scale-110" 
+                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:scale-110" 
                 style={{ color: skill.color }}
               />
               <span className={cn(
-                "text-sm font-medium text-center",
+                "text-xs sm:text-sm font-medium text-center",
                 "text-neutral-600 group-hover:text-neutral-900",
                 "dark:text-white/80 dark:group-hover:text-white",
                 "leading-tight"
