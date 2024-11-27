@@ -22,7 +22,7 @@ export default function Projects() {
               Featured Projects
             </h2>
             <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto">
-              A showcase of my recent work, featuring web applications built with modern technologies.
+              A showcase of my recent work, featuring tech built with modern technologies.
             </p>
           </motion.div>
         </div>
