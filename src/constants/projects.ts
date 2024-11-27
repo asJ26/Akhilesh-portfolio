@@ -4,8 +4,14 @@ export const projects = [
     description: "Modern portfolio built with Next.js 14, Tailwind CSS, and Framer Motion. Features smooth animations and responsive design.",
     image: "/images/projects/Porfolio.png",
     githubLink: "https://github.com/asJ26/Akhilesh-portfolio.git",
-    
     skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+  },
+  {
+    title: "IoT Sensor Data Pipeline",
+    description: "Establishes a real-time data analytics pipeline using AWS, simulating IoT sensor data generation, processing it through AWS Lambda, storing in Amazon S3, and visualizing via Amazon QuickSight for dynamic insights.",
+    image: "/images/projects/IOT_pipeline.png",
+    githubLink: "https://github.com/asJ26/IoT-sensor-Data-Pipeline.git",
+    skills: ["AWS Kinesis", "AWS Lambda", "S3", "QuickSight", "CLI"]
   },
   {
     title: "Syracuse DBMS",
