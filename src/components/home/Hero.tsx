@@ -3,17 +3,19 @@
 import { motion } from 'framer-motion';
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiMedium } from "react-icons/si";
-import ClientOnly from '../ClientOnly';
+import { FaMediumM } from "react-icons/fa";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Hero() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  
   const words = [
     {
       text: "Hi",
       className: "text-neutral-800 dark:text-white"
     },
     {
-      text: "I&apos;m",
+      text: "I'm",
       className: "text-neutral-800 dark:text-white"
     },
     {
@@ -27,27 +29,16 @@ export default function Hero() {
   ];
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-[90vh] w-full relative"
-    >
+    <section className="min-h-[90vh] w-full relative">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="h-[40rem] w-full flex flex-col items-center justify-center">
-          <ClientOnly
-            fallback={
-              <motion.h1 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white"
-              >
-                Hi, I&apos;m Akhilesh Jadhav
-              </motion.h1>
-            }
-          >
+          {isMobile ? (
+            <h1 className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white">
+              Hi, I'm Akhilesh Jadhav
+            </h1>
+          ) : (
             <TypewriterEffect words={words} className="text-4xl sm:text-5xl" />
-          </ClientOnly>
+          )}
           
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto text-center mt-6">
             Data Engineer specializing in building scalable data pipelines and analytics
@@ -78,7 +69,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform duration-200"
             >
-              <SiMedium className="w-6 h-6" />
+              <FaMediumM className="w-6 h-6" />
             </a>
           </div>
 
@@ -105,6 +96,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
