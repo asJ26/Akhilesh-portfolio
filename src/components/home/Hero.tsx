@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaMediumM } from "react-icons/fa";
+import { SiMedium } from "react-icons/si";
 import ClientOnly from '../ClientOnly';
 
 export default function Hero() {
@@ -27,14 +27,23 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-[90vh] w-full relative">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-[90vh] w-full relative"
+    >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="h-[40rem] w-full flex flex-col items-center justify-center">
           <ClientOnly
             fallback={
-              <h1 className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white">
+              <motion.h1 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-4xl sm:text-5xl font-bold text-neutral-800 dark:text-white"
+              >
                 Hi, I'm Akhilesh Jadhav
-              </h1>
+              </motion.h1>
             }
           >
             <TypewriterEffect words={words} className="text-4xl sm:text-5xl" />
@@ -69,7 +78,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform duration-200"
             >
-              <FaMediumM className="w-6 h-6" />
+              <SiMedium className="w-6 h-6" />
             </a>
           </div>
 
@@ -96,6 +105,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

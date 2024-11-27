@@ -10,8 +10,10 @@ export default function ClientOnly({
   fallback: React.ReactNode;
 }) {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -22,5 +24,6 @@ export default function ClientOnly({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  if (!mounted) return null;
   return isMobile ? fallback : children;
 }
