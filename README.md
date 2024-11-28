@@ -1,6 +1,6 @@
 # Portfolio Website
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design, dark mode support, and smooth animations.
-
+![/Porfolio.png]
 Live Demo: akhileshjadhav.info
 
 ## Features
