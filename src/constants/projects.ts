@@ -6,6 +6,13 @@ export const projects = [
     githubLink: "https://github.com/asJ26/Akhilesh-portfolio.git",
     skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
+   {
+    title: "Netflix Streaming Analytics Platform",
+    description: "Architected a robust GCP data pipeline processing over 100,000 viewing events with a 40% reduction in processing time, and designed advanced Google Data Studio dashboards that boosted strategic decision-making efficiency by 25%.",
+    image: "/images/projects/THUMBNAIL.png",
+    githubLink: "https://github.com/asJ26/Netflix-Data-Pipeline-and-Dashboard.git",
+    skills: ["BigQuery","Google Cloud Platform (GCP)","Dataflow","Looker Studio","Python"]
+  },
   {
     title: "IoT Sensor Data Pipeline",
     description: "Establishes a real-time data analytics pipeline using AWS, simulating IoT sensor data generation, processing it through AWS Lambda, storing in Amazon S3, and visualizing via Amazon QuickSight for dynamic insights.",
@@ -34,11 +41,5 @@ export const projects = [
     githubLink: "https://github.com/asJ26/Airline-Departure-Timing.git",
     skills: ["Pandas", "Scikit-learn", "Seaborn", "CSV"]
   },
-  {
-    title: "Cloud-Based IOT platform",
-    description: "Designed a cloud-based IoT system for a smart home environment using Wokwi for circuit simulation and ThingSpeak for data monitoring, integrating them via HTTP and MQTT protocols to enable real-time monitoring of various sensors and actuators.",
-    image: "/images/projects/Cloud.jpg",
-    githubLink: "https://github.com/asJ26/Cloud-based-IOT-system.git",
-    skills: ["HTTP Protocol", "MQTT Protocol", "Wokwi", "ThingSpeak", "Sensors"]
-  }
+ 
 ];
