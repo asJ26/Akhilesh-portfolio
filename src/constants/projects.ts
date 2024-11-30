@@ -30,7 +30,7 @@ export const projects = [
   {
     title: "Spotify Song Popularity",
     description: "Leverages Decision Tree and KNN algorithms to predict song popularity based on metrics like 'artist popularity', 'followers', and song characteristics, aiming to provide the music industry with actionable insights for strategic planning.",
-    image: "/images/projects/Spotify.jpeg",
+    image: "/images/projects/Spotify.png",
     githubLink: "https://github.com/asJ26/Spotify-Song-Popularity.git",
     skills: ["Spotify API", "Python", "SKlearn", "Pandas & NumPy", "Matplotlib"]
   },
