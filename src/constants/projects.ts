@@ -9,7 +9,7 @@ export const projects = [
    {
     title: "Netflix Streaming Analytics Platform",
     description: "Architected a robust GCP data pipeline processing over 100,000 viewing events with a 40% reduction in processing time, and designed advanced Google Data Studio dashboards that boosted strategic decision-making efficiency by 25%.",
-    image: "/images/projects/THUMBNAIL.png",
+    image: "/images/projects/Netflix.png",
     githubLink: "https://github.com/asJ26/Netflix-Data-Pipeline-and-Dashboard.git",
     skills: ["BigQuery","Google Cloud Platform (GCP)","Dataflow","Looker Studio","Python"]
   },
