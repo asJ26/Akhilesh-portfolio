@@ -23,7 +23,7 @@ const experiences: Experience[] = [
     type: "On-site",
     date: "June 2024 - Present",
     description: "Developed a scalable Spotify popularity prediction model using Amazon SageMaker and AWS Elastic Beanstalk, enabling real-time predictions through a secure and monitored Flask-based web application.",
-    skills: ["Amazon Sagemaker", "AWS Beanstalk", "Flask", "Python", "gunicorn"],
+    skills: ["Amazon Sagemaker", "AWS Beanstalk", "Flask", "Python"],
   },
   {
     title: "Data Engineer",
@@ -41,7 +41,7 @@ const experiences: Experience[] = [
     type: "Remote",
     date: "Jun 2020 - Jul 2022",
     description: "Utilized Apache Spark and Hadoop for large-scale data processing, reducing processing time by 30%, and managed robust data storage solutions on AWS S3 and Azure Synapse, enhancing data flow efficiency and compliance with HIPAA and GDPR.",
-    skills: ["Apache Spark", "Hadoop", "AWS", "Azure", "Doker", "Kubernetes", "MongoDB", "Power BI", "Tableau"],
+    skills: ["Apache Spark", "Hadoop", "AWS", "Azure", "Docker", "Kubernetes", "MongoDB", "Power BI", "Tableau"],
   },
 ];
 
