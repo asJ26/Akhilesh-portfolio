@@ -22,8 +22,8 @@ const experiences: Experience[] = [
     location: "Syracuse, NY",
     type: "On-site",
     date: "July 2024 - Present",
-    description: "Focused on developing predictive models and analyzing data to enhance decision-making and insights within academic research.",
-    skills: ["Python", "Spark", "Azure", "PostgreSQL"],
+    description: "Developed a scalable Spotify popularity prediction model using Amazon SageMaker and AWS Elastic Beanstalk, enabling real-time predictions through a secure and monitored Flask-based web application."",
+    skills: ["Amazon Sagemaker", "AWS Beanstalk", "Flask", "Python", "gunicorn"],
   },
   {
     title: "Data Engineer",
