@@ -28,7 +28,7 @@ export const projects = [
     skills: ["SQL", "MySQL server", "Python"]
   },
   {
-    title: "Spotify Song Popularity",
+    title: "Song Popularity Prediction",
     description: "Leverages Decision Tree and KNN algorithms to predict song popularity based on metrics like 'artist popularity', 'followers', and song characteristics, aiming to provide the music industry with actionable insights for strategic planning.",
     image: "/images/projects/Spotify.png",
     githubLink: "https://github.com/asJ26/Spotify-Song-Popularity.git",
