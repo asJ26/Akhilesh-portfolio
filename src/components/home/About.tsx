@@ -46,7 +46,7 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <Stat label="Years Experience" value="3+" />
               <Stat label="Projects Completed" value="15+" />
-              <Stat label="Technologies" value="15+" />
+              <Stat label="Technologies" value="20+" />
             </div>
           </div>
         </motion.div>
