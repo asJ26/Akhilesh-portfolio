@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from "@/utils/cn";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface SimpleTabSwitchProps {
   defaultTab: string;
@@ -16,12 +16,7 @@ export const SimpleTabSwitch = ({
   tabs,
   className,
 }: SimpleTabSwitchProps) => {
-  const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState(defaultTab);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);

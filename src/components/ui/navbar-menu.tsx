@@ -1,6 +1,6 @@
 "use client";
 
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 import { useState, useEffect } from "react";
 import type { Variants } from 'framer-motion';
 import { motion, AnimatePresence } from "framer-motion";

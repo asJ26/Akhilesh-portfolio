@@ -7,19 +7,18 @@ import {
   SiPython, SiScala, SiJavascript, SiCplusplus, SiR,
   SiApachespark, SiApachekafka, SiApachehadoop,
   SiApacheflink, SiApachecassandra, SiApacheairflow,
-  SiAmazon, SiAmazonec2, SiAmazons3, SiMicrosoftazure,
+  SiAmazon, SiAmazons3, SiMicrosoftazure,
   SiGooglecloud, SiMysql, SiPostgresql,
   SiMicrosoftsqlserver, SiOracle, SiSnowflake,
   SiMongodb, SiRedis, SiDocker, SiKubernetes,
-  SiJenkins, SiGit, SiPrometheus, SiGrafana,
-  SiAnsible, SiCircleci, SiTravisci, SiTensorflow,
-  SiPytorch, SiScikitlearn, SiKeras, SiMlflow,
+  SiJenkins, SiGit, SiGrafana,
+  SiAnsible, SiTensorflow,
+  SiPytorch, SiScikitlearn,
   SiFlask, SiDjango, SiExpress, SiSpringboot,
   SiPowerbi, SiTableau, SiDbt
 } from 'react-icons/si';
 import { 
-  FaDatabase, FaJava, FaTerminal, FaServer,
-  FaCloud, FaChartBar, FaCode
+  FaJava, FaTerminal, FaServer
 } from 'react-icons/fa';
 import { DiNginx } from 'react-icons/di';
 

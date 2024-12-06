@@ -13,7 +13,6 @@ interface Circle {
 interface ParticlesProps {
   className?: string;
   quantity?: number;
-  staticity?: number;
   ease?: number;
   refresh?: boolean;
 }
@@ -21,7 +20,6 @@ interface ParticlesProps {
 export const Particles: React.FC<ParticlesProps> = ({
   className = "",
   quantity = 50,
-  staticity = 50,
   ease = 50,
   refresh = false,
 }) => {

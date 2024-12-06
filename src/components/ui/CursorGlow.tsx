@@ -1,6 +1,5 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import { useEffect, useCallback } from 'react';
 
 export default function CursorGlow() {

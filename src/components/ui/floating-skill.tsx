@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
+import { IconType } from 'react-icons';
 
 interface FloatingSkillProps {
-  icon: any;
+  icon: IconType;
   name: string;
   color: string;
   className?: string;

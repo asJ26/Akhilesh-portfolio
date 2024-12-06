@@ -13,7 +13,7 @@ export const CanvasRevealEffect: React.FC<CanvasRevealEffectProps> = ({ children
     const container = containerRef.current;
     if (!container) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = () => {
       // Mouse move handling logic can be added here if needed
     };
 

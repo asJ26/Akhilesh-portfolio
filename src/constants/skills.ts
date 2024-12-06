@@ -7,7 +7,7 @@ import {
   SiApacheairflow, SiTalend, SiInformatica,
   SiGit, SiJenkins, SiDocker, SiKubernetes, SiTerraform, SiAnsible,
   SiPowerbi, SiTableau, SiLooker,
-  SiScala, SiElasticsearch, SiApache
+  SiScala, SiElasticsearch
 } from 'react-icons/si';
 import { 
   FaDatabase, FaNetworkWired, FaWarehouse, FaWater, 
