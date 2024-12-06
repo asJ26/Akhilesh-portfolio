@@ -4,6 +4,8 @@ import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaMediumM } from "react-icons/fa";
 import { ButtonLitLink } from "../ui/button-lit";
+import { Particles } from "../ui/particles";
+import ClientOnly from "../ClientOnly";
 
 export default function Hero() {
   const words = [
@@ -26,9 +28,17 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-[90vh] w-full relative">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="h-[40rem] w-full flex flex-col items-center justify-center">
+    <section className="h-screen w-full relative overflow-hidden">
+      {/* Particles Background */}
+      <div className="absolute inset-0">
+        <ClientOnly>
+          <Particles quantity={80} ease={30} />
+        </ClientOnly>
+      </div>
+
+      {/* Content */}
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-full w-full flex flex-col items-center justify-center">
           <div className="hidden md:block">
             <TypewriterEffect words={words} className="text-4xl sm:text-5xl" />
           </div>

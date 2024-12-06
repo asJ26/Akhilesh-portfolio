@@ -1,106 +1,78 @@
 'use client';
 
-import { cn } from "../../utils/cn";
-import { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { cn } from "@/utils/cn";
+import React, { useEffect, useRef, useState } from "react";
 
-export const Card3D = ({
+interface Card3DProps {
+  children?: React.ReactNode;
+  className?: string;
+  containerClassName?: string;
+}
+
+export const Card3D: React.FC<Card3DProps> = ({
   children,
   className,
   containerClassName,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  containerClassName?: string;
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [rotateX, setRotateX] = useState(0);
+  const [rotateY, setRotateY] = useState(0);
 
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
 
-  const mouseXSpring = useSpring(x, {
-    stiffness: 150,
-    damping: 15,
-    mass: 0.1
-  });
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = card.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
 
-  const mouseYSpring = useSpring(y, {
-    stiffness: 150,
-    damping: 15,
-    mass: 0.1
-  });
+      const rotateXUncapped = ((mouseY - centerY) / (rect.height / 2)) * -5;
+      const rotateYUncapped = ((mouseX - centerX) / (rect.width / 2)) * 5;
 
-  const rotateX = useTransform(
-    mouseYSpring,
-    [-0.5, 0.5],
-    ["4deg", "-4deg"]
-  );
+      // Cap rotation values
+      const rotateX = Math.min(Math.max(rotateXUncapped, -5), 5);
+      const rotateY = Math.min(Math.max(rotateYUncapped, -5), 5);
 
-  const rotateY = useTransform(
-    mouseXSpring,
-    [-0.5, 0.5],
-    ["-4deg", "4deg"]
-  );
+      setRotateX(rotateX);
+      setRotateY(rotateY);
+    };
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
-    
-    const rect = ref.current.getBoundingClientRect();
-    
-    const width = rect.width;
-    const height = rect.height;
-    
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-    
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    
-    x.set(xPct);
-    y.set(yPct);
-  };
+    const handleMouseLeave = () => {
+      setRotateX(0);
+      setRotateY(0);
+    };
 
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
+    card.addEventListener("mousemove", handleMouseMove);
+    card.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      card.removeEventListener("mousemove", handleMouseMove);
+      card.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   return (
-    <div 
+    <div
+      ref={cardRef}
       className={cn(
-        "group/card relative",
+        "w-full h-full perspective-1000",
         containerClassName
       )}
-      style={{
-        perspective: "1500px",
-        transformStyle: "preserve-3d",
-      }}
     >
-      <motion.div
-        ref={ref}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-        }}
+      <div
         className={cn(
-          "relative w-full h-full duration-200 transition-[transform,box-shadow]",
-          "group-hover/card:shadow-2xl",
+          "w-full h-full transition-transform duration-200 ease-out preserve-3d",
           className
         )}
+        style={{
+          transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+        }}
       >
-        <div 
-          style={{ 
-            transform: "translateZ(0)",
-            transformStyle: "preserve-3d",
-          }}
-          className="w-full h-full"
-        >
-          {children}
-        </div>
-      </motion.div>
+        {children}
+      </div>
     </div>
   );
 };

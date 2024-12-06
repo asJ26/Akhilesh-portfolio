@@ -12,6 +12,153 @@
   --foreground: #ffffff;
 }
 
+/* Light mode cursor effects */
+html:not(.dark)::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+html:not(.dark)::after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+/* Dark mode cursor effects */
+.dark::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: difference;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.dark::after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.dark body::before {
+  content: '';
+  height: 600px;
+  width: 600px;
+  position: fixed;
+  background: radial-gradient(
+    circle at center,
+    rgba(168, 85, 247, 0.15) 0%,
+    rgba(168, 85, 247, 0.1) 15%,
+    rgba(168, 85, 247, 0.05) 25%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+
+/* Project card spotlight effect */
+.project-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 0, 0, 0.07),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dark .project-card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(168, 85, 247, 0.2),
+    transparent 40%
+  );
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Skill card spotlight effect */
+.skill-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    100px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 0, 0, 0.05),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 3;
+  border-radius: inherit;
+}
+
+.dark .skill-card::before {
+  background: radial-gradient(
+    100px circle at var(--mouse-x) var(--mouse-y),
+    rgba(168, 85, 247, 0.2),
+    transparent 40%
+  );
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
 /* Enhanced dot pattern with better visibility */
 .bg-dot-pattern {
   background-image: radial-gradient(
@@ -102,14 +249,11 @@ html {
 
 /* Button gradient animation */
 @keyframes gradient-x {
-  0% {
+  0%, 100% {
     transform: translateX(-100%);
   }
   50% {
     transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 

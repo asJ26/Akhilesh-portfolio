@@ -2,46 +2,83 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from "../../utils/cn";
+import { FloatingSkill } from '../ui/floating-skill';
 import { 
-  SiPython, SiApachespark, SiApachekafka, SiApachehadoop, SiApachehive,
-  SiPostgresql, SiMysql, SiMongodb, SiRedis, SiSnowflake,
-  SiAmazon, SiGooglecloud, SiMicrosoftazure,
-  SiApacheairflow, SiDocker, SiKubernetes
+  SiPython, SiScala, SiJavascript, SiCplusplus, SiR,
+  SiApachespark, SiApachekafka, SiApachehadoop,
+  SiApacheflink, SiApachecassandra, SiApacheairflow,
+  SiAmazon, SiAmazonec2, SiAmazons3, SiMicrosoftazure,
+  SiGooglecloud, SiMysql, SiPostgresql,
+  SiMicrosoftsqlserver, SiOracle, SiSnowflake,
+  SiMongodb, SiRedis, SiDocker, SiKubernetes,
+  SiJenkins, SiGit, SiPrometheus, SiGrafana,
+  SiAnsible, SiCircleci, SiTravisci, SiTensorflow,
+  SiPytorch, SiScikitlearn, SiKeras, SiMlflow,
+  SiFlask, SiDjango, SiExpress, SiSpringboot,
+  SiPowerbi, SiTableau, SiDbt
 } from 'react-icons/si';
 import { 
-  FaDatabase, FaNetworkWired, FaWarehouse, FaWater, 
-  FaStream
+  FaDatabase, FaJava, FaTerminal, FaServer,
+  FaCloud, FaChartBar, FaCode
 } from 'react-icons/fa';
+import { DiNginx } from 'react-icons/di';
 
-const skills = [
-  // Core Data Engineering
-  { name: 'Data Modeling', icon: FaDatabase, color: '#4299E1' },
-  { name: 'ETL/ELT', icon: FaNetworkWired, color: '#48BB78' },
-  { name: 'Data Warehousing', icon: FaWarehouse, color: '#9F7AEA' },
-  { name: 'Data Lakes', icon: FaWater, color: '#4FD1C5' },
-  { name: 'Data Pipelines', icon: FaStream, color: '#F6AD55' },
-
-  // Key Technologies
-  { name: 'Python', icon: SiPython, color: '#3776AB' },
-  { name: 'Apache Spark', icon: SiApachespark, color: '#E25A1C' },
-  { name: 'Apache Kafka', icon: SiApachekafka, color: '#231F20' },
-  { name: 'Hadoop', icon: SiApachehadoop, color: '#FF652F' },
-  { name: 'Hive', icon: SiApachehive, color: '#FDEE21' },
-
-  // Databases
-  { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
-  { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-  { name: 'Snowflake', icon: SiSnowflake, color: '#29B5E8' },
-
-  // Cloud & Infrastructure
-  { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
-  { name: 'Google Cloud', icon: SiGooglecloud, color: '#4285F4' },
-  { name: 'Azure', icon: SiMicrosoftazure, color: '#0089D6' },
-  { name: 'Airflow', icon: SiApacheairflow, color: '#017CEE' },
-  { name: 'Docker', icon: SiDocker, color: '#2496ED' },
-  { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5' }
+// Organize skills into rows for pyramid layout
+const skillRows = [
+  // First row - 12 skills
+  [
+    { name: 'Python', icon: SiPython, color: '#3776AB' },
+    { name: 'Java', icon: FaJava, color: '#007396' },
+    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+    { name: 'Scala', icon: SiScala, color: '#DC322F' },
+    { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
+    { name: 'Azure', icon: SiMicrosoftazure, color: '#0089D6' },
+    { name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+    { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5' },
+    { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
+    { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
+    { name: 'scikit-learn', icon: SiScikitlearn, color: '#F7931E' },
+  ],
+  // Second row - 11 skills
+  [
+    { name: 'Spark', icon: SiApachespark, color: '#E25A1C' },
+    { name: 'Kafka', icon: SiApachekafka, color: '#D22128' },
+    { name: 'Hadoop', icon: SiApachehadoop, color: '#FF652F' },
+    { name: 'Flink', icon: SiApacheflink, color: '#E6526F' },
+    { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+    { name: 'Redis', icon: SiRedis, color: '#DC382D' },
+    { name: 'Flask', icon: SiFlask, color: '#3775A9' },
+    { name: 'Django', icon: SiDjango, color: '#092E20' },
+    { name: 'Express', icon: SiExpress, color: '#68A063' },
+  ],
+  // Third row - 10 skills
+  [
+    { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+    { name: 'R', icon: SiR, color: '#276DC3' },
+    { name: 'Shell', icon: FaTerminal, color: '#4EAA25' },
+    { name: 'Jenkins', icon: SiJenkins, color: '#D24939' },
+    { name: 'Git', icon: SiGit, color: '#F05032' },
+    { name: 'Grafana', icon: SiGrafana, color: '#F46800' },
+    { name: 'Ansible', icon: SiAnsible, color: '#EE0000' },
+    { name: 'Nginx', icon: DiNginx, color: '#009639' },
+    { name: 'Spring', icon: SiSpringboot, color: '#6DB33F' },
+    { name: 'Airflow', icon: SiApacheairflow, color: '#017CEE' },
+  ],
+  // Fourth row - 9 skills
+  [
+    { name: 'NiFi', icon: FaServer, color: '#728E9B' },
+    { name: 'Cassandra', icon: SiApachecassandra, color: '#1287B1' },
+    { name: 'S3', icon: SiAmazons3, color: '#569A31' },
+    { name: 'SQL Server', icon: SiMicrosoftsqlserver, color: '#CC2927' },
+    { name: 'Oracle', icon: SiOracle, color: '#F80000' },
+    { name: 'Snowflake', icon: SiSnowflake, color: '#29B5E8' },
+    { name: 'Power BI', icon: SiPowerbi, color: '#F2C811' },
+    { name: 'Tableau', icon: SiTableau, color: '#E97627' },
+    { name: 'dbt', icon: SiDbt, color: '#FF694B' },
+  ],
 ];
 
 export default function Skills() {
@@ -56,44 +93,46 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
-            My Experise
+            My Expertise
           </h2>
+          <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto">
+            Hover over the skills to explore my technical proficiencies
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-          {skills.map((skill, index) => (
+        <div className="flex flex-col items-center gap-8">
+          {skillRows.map((row, rowIndex) => (
             <motion.div
-              key={skill.name}
+              key={rowIndex}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              whileHover={{ y: -5 }}
-              className={cn(
-                "p-4 rounded-lg",
-                "bg-white hover:bg-neutral-50",
-                "dark:bg-[#030712] dark:hover:bg-[#111827]",
-                "border border-neutral-200",
-                "hover:border-neutral-300",
-                "dark:border-neutral-800/50 dark:hover:border-purple-500/50",
-                "overflow-hidden transition-all duration-200",
-                "flex flex-col items-center justify-center gap-3",
-                "shadow-sm hover:shadow",
-                "group"
-              )}
+              transition={{ duration: 0.5, delay: rowIndex * 0.1 }}
+              className="flex flex-wrap justify-center gap-6"
+              style={{
+                width: `${100 - rowIndex * 5}%`, // Gradually decrease width for pyramid effect
+              }}
             >
-              <skill.icon 
-                className="w-7 h-7 transition-transform duration-300 group-hover:scale-110" 
-                style={{ color: skill.color }}
-              />
-              <span className={cn(
-                "text-sm font-medium text-center",
-                "text-neutral-600 group-hover:text-neutral-900",
-                "dark:text-white/80 dark:group-hover:text-white",
-                "leading-tight"
-              )}>
-                {skill.name}
-              </span>
+              {row.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15,
+                    delay: index * 0.05
+                  }}
+                >
+                  <FloatingSkill
+                    icon={skill.icon}
+                    name={skill.name}
+                    color={skill.color}
+                  />
+                </motion.div>
+              ))}
             </motion.div>
           ))}
         </div>

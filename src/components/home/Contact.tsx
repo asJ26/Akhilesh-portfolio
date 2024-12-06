@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { cn } from "../../utils/cn";
 import { HiOutlineMail } from "react-icons/hi";
+import { FiPhone } from "react-icons/fi";
 import { ButtonLitLink } from '../ui/button-lit';
 import { CardSpotlight } from '../ui/card-spotlight';
 
@@ -30,7 +31,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-lg mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
         >
           <CardSpotlight className="w-full rounded-xl bg-white dark:bg-[#030712] border border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-neutral-100/30 dark:hover:shadow-neutral-900/30 hover:border-neutral-300 dark:hover:border-neutral-700">
             <div className="p-8">
@@ -58,6 +59,37 @@ export default function Contact() {
                   className="mt-4"
                 >
                   Mail Me →
+                </ButtonLitLink>
+              </div>
+            </div>
+          </CardSpotlight>
+
+          <CardSpotlight className="w-full rounded-xl bg-white dark:bg-[#030712] border border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-neutral-100/30 dark:hover:shadow-neutral-900/30 hover:border-neutral-300 dark:hover:border-neutral-700">
+            <div className="p-8">
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <div className={cn(
+                  "w-16 h-16 rounded-full",
+                  "bg-neutral-100 dark:bg-neutral-800",
+                  "flex items-center justify-center",
+                  "transition-colors duration-200"
+                )}>
+                  <FiPhone className="w-8 h-8 text-neutral-900 dark:text-purple-400" />
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <h3 className="text-lg font-medium text-neutral-900 dark:text-white">
+                    Call me at
+                  </h3>
+                  <p className="text-neutral-600 dark:text-white/80">
+                    +1 680-910-9825
+                  </p>
+                </div>
+
+                <ButtonLitLink
+                  href="tel:+16809109825"
+                  className="mt-4"
+                >
+                  Call Me →
                 </ButtonLitLink>
               </div>
             </div>

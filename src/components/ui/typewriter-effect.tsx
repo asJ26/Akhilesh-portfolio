@@ -18,19 +18,59 @@ export const TypewriterEffect = ({
   const isInView = useInView(scope);
   
   useEffect(() => {
-    if (isInView) {
-      animate(
+    let isMounted = true;
+    let animationFrame: number;
+
+    const animateText = async () => {
+      if (!isMounted) return;
+
+      // Reset all characters to invisible
+      await animate(
+        "span",
+        {
+          opacity: 0,
+        },
+        {
+          duration: 0.01,
+        }
+      );
+
+      if (!isMounted) return;
+
+      // Type in animation
+      await animate(
         "span",
         {
           opacity: 1,
         },
         {
-          duration: 0.03,
+          duration: 0.05,
           delay: stagger(0.1),
           ease: "easeInOut",
         }
       );
+
+      if (!isMounted) return;
+
+      // Hold the text for 5 seconds
+      await new Promise(resolve => setTimeout(resolve, 10000));
+
+      if (!isMounted) return;
+
+      // Schedule next animation
+      animationFrame = requestAnimationFrame(animateText);
+    };
+
+    if (isInView) {
+      animateText();
     }
+
+    return () => {
+      isMounted = false;
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, [isInView, animate]);
   
   return (
@@ -53,4 +93,4 @@ export const TypewriterEffect = ({
       })}
     </div>
   );
-}; 
+};

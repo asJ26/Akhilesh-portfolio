@@ -17,7 +17,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto">
-            Data Engineer specializing in building scalable solutions and transforming complex data into actionable insights.
+          Data Engineer | Cloud Solutions Architect | Big Data Evangelist
           </p>
         </motion.div>
 
@@ -35,22 +35,17 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <p className="text-neutral-700 dark:text-white/90 mb-4">
-                I&apos;m a Data Engineer with expertise in building scalable data pipelines
-                and implementing robust data solutions. With a strong foundation in
-                both software engineering and data science, I specialize in
-                transforming raw data into actionable insights.
+              <p className="text-neutral-700 dark:text-white/90 mb-4 text-center">
+                I&apos;m a passionate Data Engineer with deep expertise in AWS, Azure, and Big Data technologies like Hadoop. My career has been a dynamic adventure from constructing ETL/ELT pipelines to optimizing cloud storage and processing, always with the goal of transforming raw data into clear, actionable insights. Whether I'm deploying machine learning models or mentoring budding engineers, each day is about pushing boundaries and refining the art of data science.
               </p>
-              <p className="text-neutral-700 dark:text-white/90 mb-6">
-                My experience includes working with big data technologies, cloud
-                platforms, and modern data stack tools to deliver efficient and
-                reliable data infrastructure.
+              <p className="text-neutral-700 dark:text-white/90 mb-6 text-center">
+              In my toolkit, Python and SQL blend with visualization tools like Power BI and Tableau to not just manage data, but make it meaningful. Having worked at places like PTC and Sigma Infosolutions, I've cultivated a knack for not only solving complex data challenges but also teaching others to navigate this evolving landscape. It's about making data work smarter, and sharing that knowledge to empower teams and enhance our approach to data-driven decision making.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <Stat label="Years Experience" value="3.5+" />
-              <Stat label="Projects Completed" value="20+" />
+              <Stat label="Years Experience" value="3+" />
+              <Stat label="Projects Completed" value="15+" />
               <Stat label="Technologies" value="15+" />
             </div>
           </div>

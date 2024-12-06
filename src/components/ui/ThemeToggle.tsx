@@ -2,9 +2,19 @@
 
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Avoid rendering anything until mounted
+  }
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -24,6 +34,7 @@ export default function ThemeToggle() {
           className="w-5 h-5 text-yellow-500"
           fill="currentColor"
           viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             fillRule="evenodd"
@@ -36,8 +47,13 @@ export default function ThemeToggle() {
           className="w-5 h-5 text-gray-900"
           fill="currentColor"
           viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          <path
+            fillRule="evenodd"
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            clipRule="evenodd"
+          />
         </svg>
       )}
     </motion.button>

@@ -1,24 +1,27 @@
 'use client';
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { cn } from "../../utils/cn";
 import { CardSpotlight } from "../ui/card-spotlight";
+import { TabSwitch } from "../ui/TabSwitch";
 
-interface Experience {
+interface TimelineItem {
   title: string;
-  company: string;
+  organization: string;
   location: string;
   type: string;
   date: string;
   description: string;
-  skills: string[];
+  skills?: string[];
+  degree?: string;
+  gpa?: string;
 }
 
-const experiences: Experience[] = [
-   {
+const experiences: TimelineItem[] = [
+  {
     title: "Graduate Research Assistant",
-    company: "Syracuse university",
+    organization: "Syracuse university",
     location: "Syracuse, NY",
     type: "On-site",
     date: "June 2024 - Present",
@@ -27,7 +30,7 @@ const experiences: Experience[] = [
   },
   {
     title: "Data Engineer",
-    company: "PTC",
+    organization: "PTC",
     location: "Boston, MA",
     type: "Remote",
     date: "June 2023 - May 2024",
@@ -36,13 +39,33 @@ const experiences: Experience[] = [
   },
   {
     title: "Junior Data Engineer",
-    company: "Sigma Infosolutions",
+    organization: "Sigma Infosolutions",
     location: "Bangalore, INDIA",
     type: "Remote",
     date: "Jun 2020 - Jul 2022",
     description: "Optimized and automated data processes using Azure Data Factory, Hadoop HDInsight, and Python, significantly enhancing data integrity, efficiency, and accessibility. Implemented monitoring and advanced analytics with Azure Monitor and Power BI, resulting in reduced downtimes and faster data-driven decisions.",
     skills: ["Python", "Azure", "Hadoop", "Apache", "Cassandra", "Power BI"],
   },
+];
+
+const education: TimelineItem[] = [
+  {
+    title: "Master of Science in Computer Science",
+    organization: "Syracuse University",
+    location: "Syracuse, NY",
+    type: "GPA: 3.4/4",
+    date: "Aug 2022 - May 2024",
+    description: "Coursework:\n• Data Structures and Algorithms\n• Computer Networks\n• Software Engineering\n• Web Development\n• Artificial Intelligence\n• Cloud Computing\n• Database Systems\n• Operating Systems\n• Computer Organization\n• Digital Electronics"
+  },
+  {
+    title: "Bachelor of technology in Computer Engineering",
+    organization: "Vishwakarma Institute of Technology",
+    location: "Pune, India",
+    type: " gpa: 8.4/10.0",
+    date: "Jul 2018 - Jul 2022",
+    description: "Specialized in Computer Science with emphasis on software development and data structures. Completed projects in database management and web development.",
+    degree: "BE in Computer Engineering"
+  }
 ];
 
 const TechBadge = ({ children }: { children: React.ReactNode }) => {
@@ -58,6 +81,7 @@ const TechBadge = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function Experience() {
+  const [selected, setSelected] = useState<'Experience' | 'Education'>('Experience');
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -70,6 +94,8 @@ export default function Experience() {
     restDelta: 0.001
   });
 
+  const items = selected === 'Experience' ? experiences : education;
+
   return (
     <section id="experience" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -81,11 +107,18 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
-            Experience
+            Experience & Education
           </h2>
-          <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto">
-            My professional journey in data engineering and analytics
+          <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto mb-8">
+            My professional journey and academic background
           </p>
+
+          <TabSwitch
+            defaultTab="Experience"
+            onTabChange={(tab) => setSelected(tab as 'Experience' | 'Education')}
+            tabs={['Experience', 'Education']}
+            className="inline-flex"
+          />
         </motion.div>
 
         <div ref={ref} className="relative">
@@ -99,7 +132,7 @@ export default function Experience() {
           />
 
           <div className="relative space-y-12">
-            {experiences.map((experience, idx) => (
+            {items.map((item, idx) => (
               <div key={idx} className="relative group md:grid md:grid-cols-2 md:gap-8">
                 {/* Timeline Node */}
                 <div className="absolute left-9 md:left-1/2 -translate-x-1/2">
@@ -117,49 +150,58 @@ export default function Experience() {
                   viewport={{ once: true }}
                   className={cn(
                     "ml-24 md:ml-0",
-                    idx % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
+                    selected === 'Experience'
+                      ? idx % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
+                      : idx % 2 === 0 ? "md:col-start-2" : "md:col-start-1"
                   )}
                 >
                   <CardSpotlight className="w-full rounded-xl bg-white dark:bg-[#030712] border border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-neutral-100/30 dark:hover:shadow-neutral-900/30 hover:border-neutral-300 dark:hover:border-neutral-700">
                     <div className="p-6">
                       {/* Title */}
                       <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
-                        {experience.title}
+                        {item.title}
                       </h3>
 
-                      {/* Company, Location, and Date */}
+                      {/* Organization, Location, and Date */}
                       <div className="flex items-center justify-between text-sm text-neutral-600 dark:text-white/80 mb-3">
                         <div className="flex items-center gap-2">
-                          <span className="font-medium">{experience.company}</span>
+                          <span className="font-medium">{item.organization}</span>
                           <span>•</span>
-                          <span>{experience.location}</span>
+                          <span>{item.location}</span>
                         </div>
-                        <span className="font-medium">{experience.date}</span>
+                        <span className="font-medium">{item.date}</span>
                       </div>
 
-                      {/* Type Badge */}
-                      <div className="mb-4">
+                      {/* Type Badge & GPA */}
+                      <div className="flex items-center gap-3 mb-4">
                         <span className="px-3 py-1 text-xs font-medium rounded-full
                           bg-neutral-100 dark:bg-black/50
                           text-neutral-600 dark:text-white
                           border border-neutral-200 dark:border-neutral-800">
-                          {experience.type}
+                          {item.type}
                         </span>
+                        {item.gpa && (
+                          <span className="text-sm font-medium text-neutral-600 dark:text-white/80">
+                            GPA: {item.gpa}
+                          </span>
+                        )}
                       </div>
 
                       {/* Description */}
                       <p className="text-neutral-700 dark:text-white/90 mb-4 leading-relaxed">
-                        {experience.description}
+                        {item.description}
                       </p>
 
                       {/* Skills */}
-                      <div className="flex flex-wrap gap-2">
-                        {experience.skills.map((skill) => (
-                          <TechBadge key={skill}>
-                            {skill}
-                          </TechBadge>
-                        ))}
-                      </div>
+                      {item.skills && (
+                        <div className="flex flex-wrap gap-2">
+                          {item.skills.map((skill) => (
+                            <TechBadge key={skill}>
+                              {skill}
+                            </TechBadge>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </CardSpotlight>
                 </motion.div>

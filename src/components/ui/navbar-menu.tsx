@@ -1,8 +1,7 @@
 "use client";
 
-
 import type { FC, ReactNode } from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Variants } from 'framer-motion';
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -29,13 +28,18 @@ const menuVariants: Variants = {
 const NavbarMenu: FC = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
   
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const menuItems: MenuItem[] = [
     { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
-    { name: "Skills", link: "#skills" },
     { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
+    { name: "Skills", link: "#skills" },
     { name: "Certifications", link: "#certifications" },
     { name: "Contact", link: "#contact" }
   ];
@@ -43,6 +47,11 @@ const NavbarMenu: FC = () => {
   const handleMenuClick = (): void => {
     setIsOpen(false);
   };
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <nav className="fixed top-5 inset-x-0 z-50">
