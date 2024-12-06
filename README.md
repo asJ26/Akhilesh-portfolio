@@ -1,141 +1,50 @@
-# Portfolio Website
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design, dark mode support, and smooth animations.
-![/Porfolio.png](https://github.com/asJ26/Akhilesh-portfolio/blob/b066702e4f213ebb475a7a0396a409d185d7cbb2/Porfolio.png)
-Live Demo: [akhileshjadhav.info](https://akhileshjadhav.info/)
+# Modern Portfolio Website
 
-## Features
+A sleek and interactive portfolio website showcasing my professional journey and technical expertise. Built with Next.js, TypeScript, and Tailwind CSS, featuring modern design elements and smooth animations.
 
--  Dark/Light mode support
--  Modern and clean design
--  Fully responsive
--  Fast performance
--  Smooth animations
--  SEO optimized
--  Automated GitHub Pages deployment
+![Portfolio Preview](/Porfolio.png)
 
-## Technologies Used
+🔗 **[Live Demo](https://akhileshjadhav.info/)**
 
-- **Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Deployment**: GitHub Pages
-- **CI/CD**: GitHub Actions
+## ✨ Key Features
 
-## Prerequisites
+- **Interactive UI Elements**
+  - 3D card effects
+  - Particle animations
+  - Smooth transitions
+  - Custom cursor effects
+  - Floating skill cards
 
-- Node.js 18 or later
-- npm or yarn
-- Git
+- **Responsive Design**
+  - Seamless experience across all devices
+  - Adaptive layouts
+  - Mobile-friendly navigation
 
-## Getting Started
+- **Dark/Light Mode**
+  - Automatic theme detection
+  - Smooth theme transitions
+  - Custom theme-aware components
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/asJ26/Akhilesh-portfolio.git
-   cd Akhilesh-portfolio
-   ```
+- **Performance Optimized**
+  - Fast page loads
+  - Optimized images
+  - Smooth animations
+  - SEO friendly
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## 🛠️ Built With
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **React Icons** - Icon library
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## 🔗 Connect With Me
 
-## Project Structure
+- [GitHub](https://github.com/asJ26)
+- [LinkedIn](https://www.linkedin.com/in/akhilesh-s-jadhav/)
+- [Medium](https://medium.com/@akhileshjadhav26)
 
-```
-├── public/              # Static assets
-│   ├── images/         # Image files
-│   └── ...
-├── src/
-│   ├── app/            # Next.js app directory
-│   ├── components/     # React components
-│   │   ├── home/      # Home page components
-│   │   ├── layout/    # Layout components
-│   │   └── ui/        # Reusable UI components
-│   ├── constants/     # Constants and static data
-│   ├── context/       # React context providers
-│   ├── hooks/         # Custom React hooks
-│   ├── lib/           # Utility functions
-│   ├── styles/        # Global styles
-│   ├── types/         # TypeScript type definitions
-│   └── utils/         # Helper functions
-└── ...config files
-```
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-
-## Deployment
-
-The website is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow is triggered whenever changes are pushed to the main branch.
-
-To deploy manually:
-
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-
-2. Push changes to GitHub:
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   git push
-   ```
-
-3. The GitHub Actions workflow will automatically deploy your changes.
-
-## Making Changes
-
-You can make changes in two ways:
-
-1. **Locally**:
-   - Clone the repository
-   - Create a new branch
-   - Make changes
-   - Push to GitHub
-   - Create a pull request
-
-2. **Directly on GitHub**:
-   - Navigate to the file you want to edit
-   - Click the pencil icon
-   - Make your changes
-   - Commit directly to the main branch
-
-## Customization
-
-1. **Content**: Update the content in `src/constants/` directory
-2. **Styling**: Modify `tailwind.config.js` and `src/app/globals.css`
-3. **Components**: Edit or add components in `src/components/`
-4. **Images**: Add images to `public/images/`
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Create a pull request
-
-## License
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## Contact
-
-Akhilesh Jadhav
-- GitHub: [@asJ26](https://github.com/asJ26)
-- LinkedIn: [Akhilesh Jadhav]([https://www.linkedin.com/in/akhilesh-jadhav-data/](https://www.linkedin.com/in/akhilesh-s-jadhav/))
-- Medium: [@akhileshjadhav]([https://medium.com/@akhileshjadhav](https://medium.com/@akhileshjadhav26))
