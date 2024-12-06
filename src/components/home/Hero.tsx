@@ -39,9 +39,7 @@ export default function Hero() {
           </div>
           
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto text-center mt-6">
-            Data Engineer specializing in building scalable data pipelines and analytics
-            infrastructure. Experienced in transforming complex data challenges into
-            efficient, automated solutions.
+            In this digital world, I transform chaos into clarity through the alchemy of modern data engineering, backed by Python prowess. Crafting data pipelines is my forte, ensuring your data not only flows but tells a story.
           </p>
 
           <div className="flex gap-4 mt-8">
