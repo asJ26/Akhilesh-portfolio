@@ -14,7 +14,9 @@ export const ButtonLit = React.forwardRef<HTMLButtonElement, ButtonLitProps>(
     return (
       <button
         className={cn(
-          "group relative rounded-lg px-4 py-2 text-white transition-all duration-200",
+          "group relative rounded-lg text-white transition-all duration-200",
+          "px-3 py-1.5 sm:px-4 sm:py-2",
+          "text-sm sm:text-base",
           "bg-neutral-900 hover:bg-neutral-800",
           "dark:bg-[#030712] dark:hover:bg-purple-500/[0.15]",
           "border border-transparent",
@@ -51,7 +53,9 @@ export const ButtonLitLink = React.forwardRef<HTMLAnchorElement, React.AnchorHTM
     return (
       <a
         className={cn(
-          "group relative inline-flex items-center justify-center rounded-lg px-4 py-2 text-white transition-all duration-200",
+          "group relative inline-flex items-center justify-center rounded-lg text-white transition-all duration-200",
+          "px-3 py-1.5 sm:px-4 sm:py-2",
+          "text-sm sm:text-base",
           "bg-neutral-900 hover:bg-neutral-800",
           "dark:bg-[#030712] dark:hover:bg-purple-500/[0.15]",
           "border border-transparent",
