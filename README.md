@@ -1,4 +1,4 @@
-# Modern Portfolio Website
+# My Portfolio Website
 
 A sleek and interactive portfolio website showcasing my professional journey and technical expertise. Built with Next.js, TypeScript, and Tailwind CSS, featuring modern design elements and smooth animations.
 
