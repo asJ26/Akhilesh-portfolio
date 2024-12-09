@@ -3,6 +3,7 @@
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaMediumM } from "react-icons/fa";
+import { HiOutlineDownload } from "react-icons/hi";
 import { ButtonLitLink } from "../ui/button-lit";
 import { Particles } from "../ui/particles";
 import ClientOnly from "../ClientOnly";
@@ -79,12 +80,22 @@ export default function Hero() {
             </a>
           </div>
 
-          <ButtonLitLink
-            href="#projects"
-            className="mt-8"
-          >
-            View Projects
-          </ButtonLitLink>
+          <div className="flex gap-4 mt-8">
+            <ButtonLitLink
+              href="#projects"
+            >
+              View Projects
+            </ButtonLitLink>
+
+            <ButtonLitLink
+              href="/akhileshJ_resume.pdf"
+              className="flex items-center whitespace-nowrap"
+              download
+            >
+              <span className="inline-block">Resume</span>
+              <HiOutlineDownload className="w-5 h-5 ml-2 inline-block" />
+            </ButtonLitLink>
+          </div>
 
           <div className="grid grid-cols-3 gap-12 mt-20 text-center">
             <div>

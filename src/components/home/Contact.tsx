@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { cn } from "../../utils/cn";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
+import { HiOutlineDownload } from "react-icons/hi";
 import { ButtonLitLink } from '../ui/button-lit';
 import { CardSpotlight } from '../ui/card-spotlight';
 
@@ -94,6 +95,23 @@ export default function Contact() {
               </div>
             </div>
           </CardSpotlight>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="flex justify-center mt-12"
+        >
+          <ButtonLitLink
+            href="/akhileshJ_resume.pdf"
+            className="flex items-center whitespace-nowrap"
+            download
+          >
+            <span className="inline-block">Resume</span>
+            <HiOutlineDownload className="w-5 h-5 ml-2 inline-block" />
+          </ButtonLitLink>
         </motion.div>
       </div>
     </section>
