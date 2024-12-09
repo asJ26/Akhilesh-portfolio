@@ -2,7 +2,8 @@
 
 A sleek and interactive portfolio website showcasing my professional journey and technical expertise. Built with Next.js, TypeScript, and Tailwind CSS, featuring modern design elements and smooth animations.
 
-![Portfolio Preview](/Porfolio.png)
+![Portfolio Preview](/public/images/projects/Portfolio_light.png)
+![Portfolio Preview](/public/images/projects/Portfolio_dark.png)
 
 🔗 **[Live Demo](https://akhileshjadhav.info/)**
 
