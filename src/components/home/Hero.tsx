@@ -62,7 +62,7 @@ export default function Hero() {
               <BsGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/akhilesh-jadhav-26/"
+              href="https://www.linkedin.com/in/akhilesh-s-jadhav/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform duration-200"
