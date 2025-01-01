@@ -58,7 +58,7 @@ const certifications = [
     description: "Validates fundamental programming skills in Python, including understanding of Python's syntax, data structures, and the ability to solve software development problems using Python.",
     date: "Sep 2019",
     issuer: "Microsoft",
-    link: "https://www.linkedin.com/in/akhilesh-s-jadhav/details/certifications/"
+    link: "https://www.credly.com/badges/21e6ec0e-23a0-48ce-8121-ffd85ce48ba5/public_url"
   },
   {
     title: "Student Exchange Program: Singapore Case Study",
