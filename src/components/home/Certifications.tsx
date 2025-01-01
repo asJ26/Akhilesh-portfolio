@@ -5,6 +5,14 @@ import { HoverExpandableCard } from '../ui/hover-expandable-card';
 
 const certifications = [
   {
+    title: "AWS-certified Data Engineer",
+    subtitle: "Amazon Web Services",
+    description: "The AWS Certified Data Engineer – Associate Exam validates expertise in designing, implementing, and managing scalable, secure, and efficient data solutions on AWS.",
+    date: "Dec 2024",
+    issuer: "AWS",
+    link: "https://www.credly.com/badges/379bcb44-fd4f-4706-8c78-2c3c5dfe1666/public_url"
+  },
+  {
     title: "Academy Accreditation - Databricks Fundamentals",
     subtitle: "DataBricks",
     description: "Demonstrates foundational knowledge in using Databricks for data engineering and data science, including data pipeline construction and optimization with Apache Spark.",
@@ -43,14 +51,6 @@ const certifications = [
     date: "Oct 2024",
     issuer: "LinkedIN",
     link: "https://www.linkedin.com/learning/certificates/1517258555d23fa41d85b6fb8c1fd53d989c4ffbe8b8896a9447e4f6adfb2294"
-  },
-  {
-    title: "J.P. Morgan - Software Engineering Job Simulation",
-    subtitle: "Forage",
-    description: "An interactive assessment tool used by J.P. Morgan to evaluate potential software engineering candidates. It simulates real-world problems that software engineers at the firm might face, testing their coding skills, problem-solving abilities, and how they handle project management tasks under conditions that mimic the actual work environment.",
-    date: "Feb 2024",
-    issuer: "J.P. Morgan",
-    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_XB9qv2YFGCi9L6qXe_1708909863111_completion_certificate.pdf"
   },
   {
     title: "Microsoft Technology Associate: Python",
