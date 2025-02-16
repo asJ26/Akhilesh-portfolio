@@ -24,21 +24,21 @@ const experiences: TimelineItem[] = [
     organization: "Syracuse university",
     location: "Syracuse, NY",
     type: "On-site",
-    date: "June 2024 - Present",
+    date: "June 2024 - Present"
   },
   {
     title: "Data Engineer",
     organization: "PTC",
     location: "Boston, MA",
     type: "Remote",
-    date: "June 2023 - May 2024",
+    date: "June 2023 - May 2024"
   },
   {
     title: "Junior Data Engineer",
     organization: "Sigma Infosolutions",
     location: "Bangalore, INDIA",
     type: "Remote",
-    date: "Jun 2020 - Jul 2022",
+    date: "Jun 2020 - Jul 2022"
   },
 ];
 
