@@ -88,7 +88,7 @@ export default function Hero() {
             </ButtonLitLink>
 
             <ButtonLitLink
-              href="/Akhilesh-resume.pdf"
+              href="/AkhileshSJadhav-resume.pdf"
               className="flex items-center whitespace-nowrap"
               download
             >
