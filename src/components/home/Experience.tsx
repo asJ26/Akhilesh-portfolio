@@ -25,8 +25,6 @@ const experiences: TimelineItem[] = [
     location: "Syracuse, NY",
     type: "On-site",
     date: "June 2024 - Present",
-    description: "Developed a scalable Spotify popularity prediction model using Amazon SageMaker and AWS Elastic Beanstalk, enabling real-time predictions through a secure and monitored Flask-based web application.",
-    skills: ["Amazon Sagemaker", "AWS Beanstalk", "Flask", "Python"],
   },
   {
     title: "Data Engineer",
@@ -34,8 +32,6 @@ const experiences: TimelineItem[] = [
     location: "Boston, MA",
     type: "Remote",
     date: "June 2023 - May 2024",
-    description: "Streamlined AWS Glue and PySpark ETL workflows to reduce execution times by 30% and costs by 15%, established real-time analytics with Amazon Kinesis, and enhanced security and compliance using AWS tools, significantly improving system efficiency and data insights.",
-    skills: ["AWS", "PySpark", "CI/CD", "Kinesis"],
   },
   {
     title: "Junior Data Engineer",
@@ -43,8 +39,6 @@ const experiences: TimelineItem[] = [
     location: "Bangalore, INDIA",
     type: "Remote",
     date: "Jun 2020 - Jul 2022",
-    description: "Optimized and automated data processes using Azure Data Factory, Hadoop HDInsight, and Python, significantly enhancing data integrity, efficiency, and accessibility. Implemented monitoring and advanced analytics with Azure Monitor and Power BI, resulting in reduced downtimes and faster data-driven decisions.",
-    skills: ["Python", "Azure", "Hadoop", "Apache", "Cassandra", "Power BI"],
   },
 ];
 
