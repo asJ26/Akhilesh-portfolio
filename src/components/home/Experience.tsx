@@ -23,7 +23,7 @@ const experiences: TimelineItem[] = [
     title: "Data Engineer",
     organization: "Citi",
     location: "New York, NY",
-    type: "",
+    type: "remote",
     date: "June 2024 - Present",
     description: "At Citi, I built scalable ETL pipelines, real-time fraud detection systems, and led data warehouse migration efforts. My work improved data processing speeds, enhanced risk analytics, and strengthened data governance for regulatory compliance."
   },
