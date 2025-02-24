@@ -20,12 +20,12 @@ interface TimelineItem {
 
 const experiences: TimelineItem[] = [
   {
-    title: "Graduate Research Assistant",
-    organization: "Syracuse university",
-    location: "Syracuse, NY",
-    type: "On-site",
+    title: "Data Engineer",
+    organization: "Citi",
+    location: "New York, NY",
+    type: "",
     date: "June 2024 - Present",
-    description: "Developed an LLM-powered natural language query system on GCP that reduced data request times from 24 hours to 5 minutes for over 100 staff. Additionally, implemented an automated data quality framework processing 50K+ records using Airflow and Terraform, and built a microservices analytics platform with FastAPI/Streamlit achieving 90% accuracy in natural language to SQL transformations for real-time visualization."
+    description: "At Citi, I built scalable ETL pipelines, real-time fraud detection systems, and led data warehouse migration efforts. My work improved data processing speeds, enhanced risk analytics, and strengthened data governance for regulatory compliance."
   },
   {
     title: "Data Engineer",
@@ -33,15 +33,15 @@ const experiences: TimelineItem[] = [
     location: "Boston, MA",
     type: "Remote",
     date: "June 2023 - May 2024",
-    description: "Optimized data integration between Windchill PLM and ThingWorx IoT systems using AWS, Kafka, and Spark to accelerate product development by 40%. Developed Scala-based Kafka connectors to transition data updates from daily to real-time, and built stream processing pipelines with Spark, AWS Glue, and Postgres that cut event processing latency to under 5 seconds with an 8:1 compression ratio. Additionally, implemented CloudWatch-based monitoring dashboards with custom metrics to reduce incident response times by 50% across three regions."
+    description: "I developed ETL pipelines and real-time streaming solutions to process industrial IoT data, enabling predictive maintenance and improving data accessibility. I optimized data storage and collaborated on deploying machine learning models for anomaly detection."
   },
   {
-    title: "Junior Data Engineer",
+    title: "Data Analyst",
     organization: "Sigma Infosolutions",
     location: "Bangalore, INDIA",
     type: "Remote",
     date: "Jun 2020 - Jul 2022",
-    description: "Developed a centralized schema registry with Spring Boot and Azure SQL Database to manage 25+ schemas across 8 microservices, boosting deployment speed by 30%. Built a CDC aggregation system using Azure Data Factory and Event Hubs to process over 100K daily events from various databases. Created Power BI monitoring dashboards for ETL pipelines handling 50GB of monthly data, cutting the mean time to resolution from 2 hours to 30 minutes. Additionally, designed dbt models to monitor performance via 15+ KPIs, facilitating data-driven decisions to enhance pipeline reliability."
+    description: "At Sigma Infosolutions, I delivered data analytics and ETL solutions to improve e-Commerce and FinTech insights. I developed dashboards, automated data validation, and enhanced data pipelines, resulting in better decision-making and increased efficiency."
   },
 ];
 
