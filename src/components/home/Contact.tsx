@@ -105,7 +105,7 @@ export default function Contact() {
           className="flex justify-center mt-12"
         >
           <ButtonLitLink
-            href="/akhileshJ_resume.pdf"
+            href="/Akhilesh_Jadhav_Resume.pdf"
             className="flex items-center whitespace-nowrap"
             download
           >
