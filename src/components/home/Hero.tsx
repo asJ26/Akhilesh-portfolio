@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
           
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto text-center mt-6">
-            In this digital world, I transform chaos into clarity through the alchemy of modern data engineering, backed by Python prowess. Crafting data pipelines is my forte, ensuring your data not only flows but tells a story.
+            In today's interconnected landscape, I transform complex challenges into elegant solutions through the artistry of full-stack development. Orchestrating microservices is my signature, ensuring your systems don't just function—they thrive across clouds with seamless precision.
           </p>
 
           <div className="flex gap-4 mt-8">
