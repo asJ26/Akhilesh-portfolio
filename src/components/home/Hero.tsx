@@ -7,7 +7,6 @@ import { HiOutlineDownload } from "react-icons/hi";
 import { ButtonLitLink } from "../ui/button-lit";
 import { Particles } from "../ui/particles";
 import ClientOnly from "../ClientOnly";
-import { Code, Server, Cloud, Database, GitBranch, Globe } from "lucide-react";
 
 export default function Hero() {
   const words = [
@@ -26,39 +25,6 @@ export default function Hero() {
     {
       text: "Jadhav",
       className: "text-neutral-800 dark:text-white font-bold"
-    }
-  ];
-
-  const techCategories = [
-    {
-      title: "Frontend",
-      icon: <Code className="w-6 h-6" />,
-      technologies: "React, Redux, TypeScript"
-    },
-    {
-      title: "Backend",
-      icon: <Server className="w-6 h-6" />,
-      technologies: "Java, Spring Boot, Node.js"
-    },
-    {
-      title: "Cloud",
-      icon: <Cloud className="w-6 h-6" />,
-      technologies: "AWS, GCP, Azure"
-    },
-    {
-      title: "Database",
-      icon: <Database className="w-6 h-6" />,
-      technologies: "MongoDB, MySQL, PostgreSQL"
-    },
-    {
-      title: "DevOps",
-      icon: <GitBranch className="w-6 h-6" />,
-      technologies: "Docker, Kubernetes, CI/CD"
-    },
-    {
-      title: "API",
-      icon: <Globe className="w-6 h-6" />,
-      technologies: "REST, GraphQL, WebSockets"
     }
   ];
 
@@ -131,17 +97,19 @@ export default function Hero() {
             </ButtonLitLink>
           </div>
 
-          {/* Tech Categories Grid - Replacing the metrics */}
-          <div className="grid grid-cols-3 gap-8 md:gap-12 mt-20">
-            {techCategories.map((category, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="p-3 bg-white dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform duration-200 mb-2 shadow-md">
-                  {category.icon}
-                </div>
-                <h3 className="text-lg font-bold text-neutral-900 dark:text-purple-500">{category.title}</h3>
-                <p className="text-sm text-neutral-600 dark:text-white/80 text-center mt-1">{category.technologies}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-12 mt-20 text-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">20+</h2>
+              <p className="text-sm text-neutral-600 dark:text-white/80">Data Pipelines</p>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">100TB+</h2>
+              <p className="text-sm text-neutral-600 dark:text-white/80">Data Processed</p>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">99.9%</h2>
+              <p className="text-sm text-neutral-600 dark:text-white/80">Pipeline Reliability</p>
+            </div>
           </div>
         </div>
       </div>
