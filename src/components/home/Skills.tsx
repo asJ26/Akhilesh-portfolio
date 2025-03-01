@@ -4,22 +4,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FloatingSkill } from '../ui/floating-skill';
 import { 
-  SiPython, SiJavascript, SiTypescript, SiGolang,
-  SiHtml5, SiCss3, SiTailwindcss, SiJquery, SiAjax, 
+  SiPython, SiJavascript, SiTypescript, SiGo,
+  SiHtml5, SiCss3, SiTailwindcss, SiJquery, 
   SiRedux, SiGraphql, SiBootstrap, SiApachekafka,
-  SiAmazonaws, SiAmazons3, SiAmazonec2, SiDynamodb,
-  SiMicrosoftazure, SiGooglecloud, SiMysql, SiPostgresql,
-  SiMicrosoftsqlserver, SiOracle, SiMongodb, SiRedis,
-  SiDocker, SiKubernetes, SiJenkins, SiGit, SiGithub,
-  SiGitlab, SiSpring, SiReact, SiNextdotjs, SiNodedotjs,
-  SiAngular, SiVisualstudiocode, SiIntellijidea,
-  SiEclipseide, SiSalesforce, SiPostman, SiJira,
-  SiConfluence
+  SiAmazon, SiMicrosoftazure, SiGooglecloud, 
+  SiMysql, SiPostgresql, SiMicrosoftsqlserver, 
+  SiOracle, SiMongodb, SiRedis,
+  SiDocker, SiKubernetes, SiJenkins, SiGit, 
+  SiGithub, SiGitlab, SiSpringboot, SiReact, 
+  SiNextdotjs, SiNodedotjs, SiAngular, 
+  SiVisualstudiocode, SiIntellijidea, SiEclipseide, 
+  SiSalesforce, SiPostman, SiJira, SiConfluence
 } from 'react-icons/si';
 import { 
-  FaJava, FaTerminal, 
-  FaCplusplus, FaSwift, 
+  FaJava, FaTerminal, FaSwift
 } from 'react-icons/fa';
+import { DiCpp } from 'react-icons/di';
 import { TbBrandCSharp } from 'react-icons/tb';
 
 // Organize skills into rows for pyramid layout
@@ -30,10 +30,10 @@ const skillRows = [
     { name: 'Python', icon: SiPython, color: '#3776AB' },
     { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
     { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-    { name: 'C++', icon: FaCplusplus, color: '#00599C' },
+    { name: 'C++', icon: DiCpp, color: '#00599C' },
     { name: 'C', icon: TbBrandCSharp, color: '#A8B9CC' },
     { name: 'Swift', icon: FaSwift, color: '#FA7343' },
-    { name: 'Golang', icon: SiGolang, color: '#00ADD8' },
+    { name: 'Go', icon: SiGo, color: '#00ADD8' },
     { name: 'Shell', icon: FaTerminal, color: '#4EAA25' },
   ],
   // Second row - Web & Cloud
@@ -44,13 +44,13 @@ const skillRows = [
     { name: 'jQuery', icon: SiJquery, color: '#0769AD' },
     { name: 'Redux', icon: SiRedux, color: '#764ABC' },
     { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
-    { name: 'AWS', icon: SiAmazonaws, color: '#FF9900' },
+    { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
     { name: 'Azure', icon: SiMicrosoftazure, color: '#0089D6' },
     { name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
   ],
   // Third row - Frameworks & DevOps
   [
-    { name: 'Spring', icon: SiSpring, color: '#6DB33F' },
+    { name: 'Spring', icon: SiSpringboot, color: '#6DB33F' },
     { name: 'React.js', icon: SiReact, color: '#61DAFB' },
     { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
     { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
