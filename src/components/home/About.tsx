@@ -18,7 +18,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-neutral-600 dark:text-white/80 max-w-2xl mx-auto">
-            Data Engineer | Cloud Solutions Architect | Big Data Evangelist
+            Software Developer | Full Stack Engineer | Data Engineer
           </p>
         </motion.div>
 
@@ -61,10 +61,10 @@ export default function About() {
                 className="text-justify"
               >
                 <p className="text-neutral-700 dark:text-white/90 mb-4">
-                  I&apos;m a passionate Data Engineer with deep expertise in AWS, Azure, and Big Data technologies like Hadoop. My career has been a dynamic adventure from constructing ETL/ELT pipelines to optimizing cloud storage and processing, always with the goal of transforming raw data into clear, actionable insights. Whether I'm deploying machine learning models or mentoring budding engineers, each day is about pushing boundaries and refining the art of data science.
+                  I&apos;m a versatile Software Developer with over 3 years of experience building distributed systems that seamlessly integrate front-end and back-end technologies. My journey through the tech landscape has been marked by crafting microservices architectures, RESTful APIs, and cloud-native solutions across AWS and GCP environments. From developing fraud detection systems with LLM integration at Citi to spearheading manufacturing workflow automation at PTC, I&apos;ve consistently delivered solutions that enhance performance and user experience.
                 </p>
                 <p className="text-neutral-700 dark:text-white/90 mb-6">
-                  In my toolkit, Python and SQL blend with visualization tools like Power BI and Tableau to not just manage data, but make it meaningful. Having worked at places like PTC and Sigma Infosolutions, I've cultivated a knack for not only solving complex data challenges but also teaching others to navigate this evolving landscape. It's about making data work smarter, and sharing that knowledge to empower teams and enhance our approach to data-driven decision making.
+                  My technical arsenal includes Java, React, Spring Boot, and Node.js, complemented by expertise in containerization through Docker and Kubernetes. I thrive in the DevOps ecosystem, implementing CI/CD pipelines that significantly reduce deployment times while maintaining system reliability. Whether optimizing database performance through Hibernate ORM and Redis caching or designing event-driven architectures with Apache Kafka, I approach each challenge with a focus on scalability, security, and innovation. With a foundation in both Computer Science education and practical industry experience, I continue to bridge technological gaps and create user-centric solutions that drive business value.
                 </p>
               </motion.div>
             </div>
