@@ -6,20 +6,18 @@ import { FloatingSkill } from '../ui/floating-skill';
 import { 
   SiPython, SiJavascript, SiTypescript, SiGo,
   SiHtml5, SiCss3, SiTailwindcss, SiJquery, 
-  SiRedux, SiGraphql, SiBootstrap, SiApachekafka,
+  SiRedux, SiGraphql, SiApachekafka,
   SiAmazon, SiMicrosoftazure, SiGooglecloud, 
   SiMysql, SiPostgresql, SiMicrosoftsqlserver, 
   SiOracle, SiMongodb, SiRedis,
   SiDocker, SiKubernetes, SiJenkins, SiGit, 
-  SiGithub, SiGitlab, SiSpringboot, SiReact, 
+  SiSpringboot, SiReact, 
   SiNextdotjs, SiNodedotjs, SiAngular, 
-  SiVisualstudiocode, SiIntellijidea, SiEclipseide, 
-  SiSalesforce, SiPostman, SiJira, SiConfluence
+  SiPostman, SiJira
 } from 'react-icons/si';
 import { 
-  FaJava, FaTerminal, FaSwift
+  FaJava, FaTerminal, FaSwift, FaCode
 } from 'react-icons/fa';
-import { DiCpp } from 'react-icons/di';
 import { TbBrandCSharp } from 'react-icons/tb';
 
 // Organize skills into rows for pyramid layout
@@ -30,7 +28,7 @@ const skillRows = [
     { name: 'Python', icon: SiPython, color: '#3776AB' },
     { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
     { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-    { name: 'C++', icon: DiCpp, color: '#00599C' },
+    { name: 'C++', icon: FaCode, color: '#00599C' },
     { name: 'C', icon: TbBrandCSharp, color: '#A8B9CC' },
     { name: 'Swift', icon: FaSwift, color: '#FA7343' },
     { name: 'Go', icon: SiGo, color: '#00ADD8' },
