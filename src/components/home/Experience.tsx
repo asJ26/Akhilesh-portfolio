@@ -20,28 +20,28 @@ interface TimelineItem {
 
 const experiences: TimelineItem[] = [
   {
-    title: "Data Engineer",
+    title: "Software Developer Intern",
     organization: "Citi",
-    location: "New York, NY",
+    location: "San Francisco, CA",
     type: "remote",
     date: "June 2024 - Present",
-    description: "At Citi, I built scalable ETL pipelines, real-time fraud detection systems, and led data warehouse migration efforts. My work improved data processing speeds, enhanced risk analytics, and strengthened data governance for regulatory compliance."
+    description: "At Citi, I developed a microservices-based fraud detection system integrating LLMs for pattern recognition, reducing false positives by 15%. I engineered a RAG dashboard with event-driven architecture using Apache Kafka and optimized MySQL database performance through Hibernate ORM and Redis caching, improving response times by 12%. I also migrated legacy financial applications to GCP with cloud-native solutions, reducing system latency by 18% while maintaining data integrity."
   },
   {
-    title: "Data Engineer",
+    title: "Software Developer",
     organization: "PTC",
     location: "Boston, MA",
     type: "Remote",
     date: "June 2023 - May 2024",
-    description: "I developed ETL pipelines and real-time streaming solutions to process industrial IoT data, enabling predictive maintenance and improving data accessibility. I optimized data storage and collaborated on deploying machine learning models for anomaly detection."
+    description: "I spearheaded development of a Manufacturing Workflow Automation Platform using PERN stack, reducing implementation time by 25%. I formulated RESTful APIs with WebSocket protocols that improved system responsiveness by 40% compared to traditional HTTP polling methods. I also designed PostgreSQL database schemas with temporal tables and materialized views, reducing query latency by 30%, and deployed containerized infrastructure on AWS EKS with Jenkins CI/CD pipelines."
   },
   {
-    title: "Data Analyst",
+    title: "Software Developer",
     organization: "Sigma Infosolutions",
     location: "Bangalore, INDIA",
     type: "Remote",
     date: "Jun 2020 - Jul 2022",
-    description: "At Sigma Infosolutions, I delivered data analytics and ETL solutions to improve e-Commerce and FinTech insights. I developed dashboards, automated data validation, and enhanced data pipelines, resulting in better decision-making and increased efficiency."
+    description: "At Sigma Infosolutions, I developed a microservices-based retail system using Java Spring Boot and MySQL, reducing system latency by 15%. I built responsive customer dashboards using React.js with Redux, MongoDB, and Elasticsearch, improving customer engagement by 18%. I also engineered back-end services for an e-commerce platform, optimized MySQL database queries, and orchestrated applications on AWS using Docker containers with CI/CD pipelines, reducing deployment time by 40%."
   },
 ];
 
