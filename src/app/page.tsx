@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <About />
-      <Experience />
+      
       <Projects />
       
       <Skills />
@@ -20,3 +20,5 @@ export default function Home() {
     </main>
   );
 }
+
+// <Experience />
