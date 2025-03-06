@@ -37,7 +37,7 @@ const NavbarMenu: FC = () => {
   const menuItems: MenuItem[] = [
     { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
-    { name: "Experience", link: "#experience" },
+    // { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
     { name: "Skills", link: "#skills" },
     { name: "Certifications", link: "#certifications" },
