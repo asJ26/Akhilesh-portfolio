@@ -15,7 +15,7 @@ export const projects = [
     skills: ["AWS Kinesis", "AWS Lambda", "S3", "QuickSight", "CLI"]
   },
    {
-    title: "Sentiment Analytics Pipeline",
+    title: "Sentiment Analytics",
     description: "Developed a real-time railway tweet analysis platform using Python, Django, and Azure services to process social media data for sentiment analysis and emergency detection, enhancing railway operations.",
     image: "/images/projects/twitter.png",
     githubLink: "https://github.com/asJ26/Twitter-pipeline-AZURE.git",
