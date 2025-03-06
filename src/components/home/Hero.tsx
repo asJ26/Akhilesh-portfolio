@@ -97,7 +97,7 @@ export default function Hero() {
             </ButtonLitLink>
           </div>
 
-          <div className="grid grid-cols-3 gap-12 mt-20 text-center">
+{/*           <div className="grid grid-cols-3 gap-12 mt-20 text-center">
             <div>
               <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">20+</h2>
               <p className="text-sm text-neutral-600 dark:text-white/80">Data Pipelines</p>
@@ -110,7 +110,7 @@ export default function Hero() {
               <h2 className="text-3xl font-bold mb-2 text-neutral-900 dark:text-purple-500">99.9%</h2>
               <p className="text-sm text-neutral-600 dark:text-white/80">Pipeline Reliability</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
