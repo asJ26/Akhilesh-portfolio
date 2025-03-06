@@ -87,14 +87,14 @@ export default function Hero() {
               View Projects
             </ButtonLitLink>
 
-            <ButtonLitLink
+{/*             <ButtonLitLink
               href="/Akhilesh_Jadhav_Resume.pdf"
               className="flex items-center whitespace-nowrap"
               download
             >
               <span className="inline-block">Resume</span>
               <HiOutlineDownload className="w-5 h-5 ml-2 inline-block" />
-            </ButtonLitLink>
+            </ButtonLitLink> */}
           </div>
 
 {/*           <div className="grid grid-cols-3 gap-12 mt-20 text-center">
