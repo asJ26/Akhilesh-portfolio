@@ -51,7 +51,7 @@ export default function Contact() {
                     Drop me a line at
                   </h3>
                   <p className="text-neutral-600 dark:text-white/80">
-                    akhileshjadhav26@gmail.com
+                    xyz@gmail.com
                   </p>
                 </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
                     Call me at
                   </h3>
                   <p className="text-neutral-600 dark:text-white/80">
-                    +1 680-910-9825
+                    +1 xxx-xxx-xxxx
                   </p>
                 </div>
 
